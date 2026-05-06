@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Instant Weather</h1>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <form id="weather-form">
+                <label for="zipcode">Code Postal :</label>
+                <input type="text" id="zipcode" name="zipcode" maxlength="5" placeholder="Ex: 35000" required>
+                
+                <label for="city-select">Choisir une commune :</label>
+                <select id="city-select" name="city">
+                    <option value="">--Veuillez saisir un code postal--</option>
+                </select>
+
+                <button type="submit" id="btn-search">Afficher la météo</button>
+            </form>
+        </section>
+
+        <section id="weather-result" class="hidden">
+            <div class="weather-card">
+                <h2 id="display-city">Nom de la ville</h2>
+                <div class="weather-info">
+                    <p>Température Min: <span id="temp-min">--</span>°C</p>
+                    <p>Température Max: <span id="temp-max">--</span>°C</p>
+                    <p>Probabilité de pluie: <span id="rain-prob">--</span>%</p>
+                    <p>Ensoleillement: <span id="sun-hours">--</span>h</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
